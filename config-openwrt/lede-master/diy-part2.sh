@@ -31,9 +31,9 @@ echo "DISTRIB_SOURCECODE='lede'" >>package/base-files/files/etc/openwrt_release
 # Add luci-app-amlogic
 svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic package/luci-app-amlogic
 
-rm -rf package/lean/openwrt-packages
 
-git clone https://github.com/haiibo/openwrt-packages package/lean/openwrt-packages
+
+
 
 # Fix runc version error
 # rm -rf ./feeds/packages/utils/runc/Makefile
@@ -45,6 +45,8 @@ git clone https://github.com/haiibo/openwrt-packages package/lean/openwrt-packag
 
 # Add third-party software packages (The entire repository)
 # git clone https://github.com/libremesh/lime-packages.git package/lime-packages
+rm -rf package/openwrt-packages
+git clone https://github.com/haiibo/openwrt-packages.git package/openwrt-packages
 # Add third-party software packages (Specify the package)
 # svn co https://github.com/libremesh/lime-packages/trunk/packages/{shared-state-pirania,pirania-app,pirania} package/lime-packages/packages
 # Add to compile options (Add related dependencies according to the requirements of the third-party software package Makefile)
